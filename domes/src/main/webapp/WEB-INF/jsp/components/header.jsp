@@ -131,7 +131,7 @@
                             </div>
                         </div>
                     </div>
-                    <a class="profil-none" href="#">Connexion</a>
+                    <a class="profil-none" href="/login">Connexion</a>
                     <span class="profil-none"> | </span>
                     <a class="profil-none" href="#">Inscription</a>
                     <a class="profil-none" href="/domes/pages/panier.jsp">Panier</a>
