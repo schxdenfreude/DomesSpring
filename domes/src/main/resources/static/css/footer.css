@@ -1,0 +1,160 @@
+*,
+:before,
+:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+footer {
+  height: 20vh;
+  background-color: #5597ff;
+  position: relative;
+  width: 100%;
+  background: #3586ff;
+  min-height: 100px;
+  height: calc(100% + 2vh);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 4vh;
+}
+
+.top--svg {
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  bottom: 0;
+  overflow: hidden;
+}
+
+.social {
+  margin-top: 1vh;
+  width: 50%;
+  height: fit-content;
+  margin: auto;
+  text-align: center;
+  position: relative;
+  color: #fff;
+}
+
+.social--flex {
+  display: flex;
+  justify-content: center;
+  width: 30%;
+  margin: 0 auto;
+  gap: 30px;
+}
+
+.social:before {
+  content: '';
+  position: absolute;
+  left: calc(-50% - 5px);
+  top: calc(50% - 3px);
+  border-bottom: 2.5px solid white;
+  outline: none;
+  width: 70%;
+}
+
+.social:after {
+  content: '';
+  position: absolute;
+  right: calc(-50% - 5px);
+  top: calc(50% - 3px);
+  border-bottom: 2.5px solid white;
+  width: 70%;
+}
+
+.social img {
+
+  width: calc(60px - 0.4vw);
+}
+
+.footer-wave-svg {
+  background-color: transparent;
+  display: block;
+  height: 30px;
+  position: absolute;
+  top: -1px;
+  width: 100%;
+}
+
+.footer-wave-path {
+  fill: #fffff2;
+}
+footer .social_icon{
+  margin: 60px 0 10px 0 !important;
+}
+footer .social_icon,
+footer .menu{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+footer .social_icon li,
+footer .menu li{
+  list-style: none;
+}
+footer .social_icon li a{
+  font-size: 2em;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  transition: .5s;
+}
+footer .social_icon li a:hover{
+  transform: translateY(-10px);
+}
+footer .menu li a{
+  font-size: clamp(1rem, 1.3rem + 1vw, 1.3rem);
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  text-decoration: none;
+  opacity: 0.75;
+}
+footer .menu li a:hover{
+  opacity: 1;
+}
+footer p{
+  color: #fff;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  font-size: 1.1em;
+}
+
+.mentions ul{
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.menu{
+  padding-left: 0 !important;
+
+}
+.sous--footer{
+  height: 6vh;
+  width: 100%;
+}
+.mentions{
+  margin: 0 auto;
+  width: 20%;
+}
+.mentions ul{
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+}
+.mentions ul li, .mentions ul li a{
+  list-style: none;
+  color: #fff !important;
+  text-decoration: none !important;
+}
+hr{
+  width: 50%;
+  color: white !important;
+}
