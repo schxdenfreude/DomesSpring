@@ -2,6 +2,7 @@ package com.example.domes.controllers;
 
 import com.example.domes.beans.User;
 import com.example.domes.repository.UserRepository;
+import com.example.domes.service.LoginService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -16,12 +17,12 @@ import java.util.List;
 @Controller
 public class LoginController {
     @Autowired
-    private UserRepository userRepository;
+    private LoginService loginService;
 
     @PostMapping ("/loginUser")
     public String loginUser(@ModelAttribute("newuser") User user, Model model){
         User localuser = new User();
-        localuser = userRepository.loginVerif(user.getLoginUser(), user.getPasswordUser());
+        localuser = loginService.verifyLogin(user);
         System.out.println(user.getPasswordUser());
 
         if(localuser == null){
