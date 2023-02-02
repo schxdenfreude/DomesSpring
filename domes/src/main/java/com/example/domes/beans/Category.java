@@ -11,23 +11,23 @@ public class Category {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id_category;
+    private int idCategory;
 
-    private String category_name;
+    private String categoryName;
 
-    public int getId_category() {
-        return id_category;
+    public int getIdCategory() {
+        return idCategory;
     }
 
-    public void setId_category(int id_category) {
-        this.id_category = id_category;
+    public void setIdCategory(int idCategory) {
+        this.idCategory = idCategory;
     }
 
-    public String getCategory_name() {
-        return category_name;
+    public String getCategoryName() {
+        return categoryName;
     }
 
-    public void setCategory_name(String category_name) {
-        this.category_name = category_name;
+    public void setCategoryName(String categoryName) {
+        this.categoryName = categoryName;
     }
 }

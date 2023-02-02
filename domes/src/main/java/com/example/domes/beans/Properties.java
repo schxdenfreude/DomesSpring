@@ -7,7 +7,22 @@ import javax.persistence.Id;
 public class Properties {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id_property;
-    private String property_name;
+    private int idProperty;
+    private String propertyName;
 
+    public int getIdProperty() {
+        return idProperty;
+    }
+
+    public void setIdProperty(int idProperty) {
+        this.idProperty = idProperty;
+    }
+
+    public String getPropertyName() {
+        return propertyName;
+    }
+
+    public void setPropertyName(String propertyName) {
+        this.propertyName = propertyName;
+    }
 }

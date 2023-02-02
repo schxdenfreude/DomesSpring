@@ -10,8 +10,31 @@ public class Orders {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
     @DateTimeFormat(pattern = "yyyy-MM-dd")
-    private Date order_date;
+    private Date orderDate;
     @ManyToOne
-    private int id_state;
+    private int idState;
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public Date getOrderDate() {
+        return orderDate;
+    }
+
+    public void setOrderDate(Date orderDate) {
+        this.orderDate = orderDate;
+    }
+
+    public int getIdState() {
+        return idState;
+    }
+
+    public void setIdState(int idState) {
+        this.idState = idState;
+    }
 }

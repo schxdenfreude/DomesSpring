@@ -12,8 +12,8 @@ public class Category_properties {
     @Embeddable
     public class PropertyId implements Serializable {
 
-        private int id_category;
-        private int id_property;
+        private int idCategory;
+        private int idProperty;
     }
     @EmbeddedId
     @OneToOne

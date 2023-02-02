@@ -12,46 +12,46 @@ import java.util.Date;
 public class Client {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id_user;
-    private String first_name;
-    private String last_name;
+    private int idUser;
+    private String firstName;
+    private String lastName;
     @DateTimeFormat(pattern = "yyyy-MM-dd")
-    private Date creation_date;
+    private Date creationDate;
     private String mail;
-    private String address_client;
+    private String addressClient;
     private String city;
-    private String city_code;
+    private String cityCode;
 
-    public int getId_user() {
-        return id_user;
+    public int getIdUser() {
+        return idUser;
     }
 
-    public void setId_user(int id_user) {
-        this.id_user = id_user;
+    public void setIdUser(int idUser) {
+        this.idUser = idUser;
     }
 
-    public String getFirst_name() {
-        return first_name;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setFirst_name(String first_name) {
-        this.first_name = first_name;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
-    public String getLast_name() {
-        return last_name;
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setLast_name(String last_name) {
-        this.last_name = last_name;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
-    public Date getCreation_date() {
-        return creation_date;
+    public Date getCreationDate() {
+        return creationDate;
     }
 
-    public void setCreation_date(Date creation_date) {
-        this.creation_date = creation_date;
+    public void setCreationDate(Date creationDate) {
+        this.creationDate = creationDate;
     }
 
     public String getMail() {
@@ -62,12 +62,12 @@ public class Client {
         this.mail = mail;
     }
 
-    public String getAddress_client() {
-        return address_client;
+    public String getAddressClient() {
+        return addressClient;
     }
 
-    public void setAddress_client(String address_client) {
-        this.address_client = address_client;
+    public void setAddressClient(String addressClient) {
+        this.addressClient = addressClient;
     }
 
     public String getCity() {
@@ -78,11 +78,11 @@ public class Client {
         this.city = city;
     }
 
-    public String getCity_code() {
-        return city_code;
+    public String getCityCode() {
+        return cityCode;
     }
 
-    public void setCity_code(String city_code) {
-        this.city_code = city_code;
+    public void setCityCode(String cityCode) {
+        this.cityCode = cityCode;
     }
 }

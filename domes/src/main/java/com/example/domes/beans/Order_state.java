@@ -8,22 +8,22 @@ import javax.persistence.Id;
 public class Order_state {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-private int id_state;
-private String state_name;
+private int idState;
+private String stateName;
 
-    public int getId_state() {
-        return id_state;
+    public int getIdState() {
+        return idState;
     }
 
-    public void setId_state(int id_state) {
-        this.id_state = id_state;
+    public void setIdState(int idState) {
+        this.idState = idState;
     }
 
-    public String getState_name() {
-        return state_name;
+    public String getStateName() {
+        return stateName;
     }
 
-    public void setState_name(String state_name) {
-        this.state_name = state_name;
+    public void setStateName(String stateName) {
+        this.stateName = stateName;
     }
 }
