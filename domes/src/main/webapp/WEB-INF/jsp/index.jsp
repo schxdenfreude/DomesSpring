@@ -5,17 +5,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="asset/css/index.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
     <title>Document</title>
 </head>
 
 <body>
-    
+     <jsp:include page="components/header.jsp" />
+
     <main>
         <!-- Image top  -->
         <section class="slider--img-landing">
-            <img src="../landing-page/images/chat.jpg" alt="">
+            <img src="images/index/chat.jpg" alt="">
         </section>
 
         <!-- Recommandation -->
@@ -31,7 +35,7 @@
                     <section class="slider--recommandation">
                         <div class="slider--card">
                             <div class="img--card">
-                                <img src="../landing-page/images/chat-card.png" alt="">
+                                <img src="images/index/chat-card.png" alt="">
                             </div>
                             <div class="desc--card">
                                 <h2 class="title">Chat / Maine Coon <span class="value--price">1500€</span></h2>
@@ -48,7 +52,7 @@
                     <section class="slider--recommandation">
                         <div class="slider--card">
                             <div class="img--card">
-                                <img src="../landing-page/images/chat-card.png" alt="">
+                                <img src="images/index/chat-card.png" alt="">
                             </div>
                             <div class="desc--card">
                                 <h2 class="title">Chat / Maine Coon <span class="value--price">1500€</span></h2>
@@ -65,7 +69,7 @@
                     <section class="slider--recommandation">
                         <div class="slider--card">
                             <div class="img--card">
-                                <img src="../landing-page/images/chat-card.png" alt="">
+                                <img src="images/index/chat-card.png" alt="">
                             </div>
                             <div class="desc--card">
                                 <h2 class="title">Chat / Maine Coon <span class="value--price">1500€</span></h2>
@@ -82,7 +86,7 @@
                     <section class="slider--recommandation">
                         <div class="slider--card">
                             <div class="img--card">
-                                <img src="../landing-page/images/chat-card.png" alt="">
+                                <img src="images/index/chat-card.png" alt="">
                             </div>
                             <div class="desc--card">
                                 <h2 class="title">Chat / Maine Coon <span class="value--price">1500€</span></h2>
@@ -99,7 +103,7 @@
                     <section class="slider--recommandation">
                         <div class="slider--card">
                             <div class="img--card">
-                                <img src="../landing-page/images/chat-card.png" alt="">
+                                <img src="images/index/chat-card.png" alt="">
                             </div>
                             <div class="desc--card">
                                 <h2 class="title">Chat / Maine Coon <span class="value--price">1500€</span></h2>
@@ -116,7 +120,7 @@
                     <section class="slider--recommandation">
                         <div class="slider--card">
                             <div class="img--card">
-                                <img src="../landing-page/images/chat-card.png" alt="">
+                                <img src="images/index/chat-card.png" alt="">
                             </div>
                             <div class="desc--card">
                                 <h2 class="title">Chat / Maine Coon <span class="value--price">1500€</span></h2>
@@ -133,7 +137,7 @@
                     <section class="slider--recommandation">
                         <div class="slider--card">
                             <div class="img--card">
-                                <img src="../landing-page/images/chat-card.png" alt="">
+                                <img src="images/index/chat-card.png" alt="">
                             </div>
                             <div class="desc--card">
                                 <h2 class="title">Chat / Maine Coon <span class="value--price">1500€</span></h2>
@@ -150,7 +154,7 @@
                     <section class="slider--recommandation">
                         <div class="slider--card">
                             <div class="img--card">
-                                <img src="../landing-page/images/chat-card.png" alt="">
+                                <img src="images/index/index/chat-card.png" alt="">
                             </div>
                             <div class="desc--card">
                                 <h2 class="title">Chat / Maine Coon <span class="value--price">1500€</span></h2>
@@ -167,7 +171,7 @@
                     <section class="slider--recommandation">
                         <div class="slider--card">
                             <div class="img--card">
-                                <img src="../landing-page/images/chat-card.png" alt="">
+                                <img src="images/index/index/chat-card.png" alt="">
                             </div>
                             <div class="desc--card">
                                 <h2 class="title">Chat / Maine Coon <span class="value--price">1500€</span></h2>
@@ -192,25 +196,11 @@
             <div class="slider--config">
                 <div class="swiper mySwiperAnimal swiper--grid">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide swiper-slide--grid"><img src="../landing-page/images/chat-card.png" alt=""></div>
-                        <div class="swiper-slide swiper-slide--grid"><img src="../landing-page/images/chat-card.png" alt=""></div>
-                        <div class="swiper-slide swiper-slide--grid"><img src="../landing-page/images/chat-card.png" alt=""></div>
-                        <div class="swiper-slide swiper-slide--grid"><img src="../landing-page/images/chat-card.png" alt=""></div>
-                        <div class="swiper-slide swiper-slide--grid"><img src="../landing-page/images/chat-card.png" alt=""></div>
-                        <div class="swiper-slide swiper-slide--grid"><img src="../landing-page/images/chat-card.png" alt=""></div>
-                        <div class="swiper-slide swiper-slide--grid"><img src="../landing-page/images/chat-card.png" alt=""></div>
-                        <div class="swiper-slide swiper-slide--grid"><img src="../landing-page/images/chat-card.png" alt=""></div>
-                        <div class="swiper-slide swiper-slide--grid"><img src="../landing-page/images/chat-card.png" alt=""></div>
-                        <div class="swiper-slide swiper-slide--grid"><img src="../landing-page/images/chat-card.png" alt=""></div>
-                        <div class="swiper-slide swiper-slide--grid"><img src="../landing-page/images/chat-card.png" alt=""></div>
-                        <div class="swiper-slide swiper-slide--grid"><img src="../landing-page/images/chat-card.png" alt=""></div>
-                        <div class="swiper-slide swiper-slide--grid"><img src="../landing-page/images/chat-card.png" alt=""></div>
-                        <div class="swiper-slide swiper-slide--grid"><img src="../landing-page/images/chat-card.png" alt=""></div>
-                        <div class="swiper-slide swiper-slide--grid"><img src="../landing-page/images/chat-card.png" alt=""></div>
-                        <div class="swiper-slide swiper-slide--grid"><img src="../landing-page/images/chat-card.png" alt=""></div>
-                        <div class="swiper-slide swiper-slide--grid"><img src="../landing-page/images/chat-card.png" alt=""></div>
-                        <div class="swiper-slide swiper-slide--grid"><img src="../landing-page/images/chat-card.png" alt=""></div>
-                        <div class="swiper-slide swiper-slide--grid"><img src="../landing-page/images/chat-card.png" alt=""></div>
+                        <div class="swiper-slide swiper-slide--grid"><img src="images/index/chat-card.png" alt=""></div>
+                        <div class="swiper-slide swiper-slide--grid"><img src="images/index/chat-card.png" alt=""></div>
+                        <div class="swiper-slide swiper-slide--grid"><img src="images/index/chat-card.png" alt=""></div>
+                        <div class="swiper-slide swiper-slide--grid"><img src="images/index/chat-card.png" alt=""></div>
+
                     </div>
                     <div class="swiper-pagination"></div>
                 </div>
@@ -224,15 +214,15 @@
 
         <section class="services">
             <div class="container--services">
-                <img src="../landing-page/images/help.png" alt="">
+                <img src="images/index/help.png" alt="">
                 <p>Service clients 6j/7</p>
             </div>
             <div class="container--services">
-                <img src="../landing-page/images/protection.png" alt="">
+                <img src="images/index/protection.png" alt="">
                 <p>Satisfait ou remboursé</p>
             </div>
             <div class="container--services">
-                <img src="../landing-page/images/paiement-securise.png" alt="">
+                <img src="images/index/paiement-securise.png" alt="">
                 <p>Paiement sécurisé en 3 ou 4 fois</p>
             </div>
         </section>
@@ -243,29 +233,31 @@
 
         <section class="services--additional">
             <div class="img">
-                <img src="../landing-page/images/service-image/adoption.png" alt="">
+                <img src="images/index/service-image/adoption.png" alt="">
             </div>
             <div class="img">
-                <img src="../landing-page/images/service-image/carte-plus.png" alt="">
+                <img src="images/index/service-image/carte-plus.png" alt="">
             </div>
             <div class="img">
-                <img src="../landing-page/images/service-image/engagement.png" alt="">
+                <img src="images/index/service-image/engagement.png" alt="">
             </div>
             <div class="img">
-                <img src="../landing-page/images/service-image/toilettage.png" alt="">
+                <img src="images/index/service-image/toilettage.png" alt="">
             </div>
             <div class="img">
-                <img src="../landing-page/images/service-image/conseils.png" alt="">
+                <img src="images/index/service-image/conseils.png" alt="">
             </div>
             <div class="img">
-                <img src="../landing-page/images/service-image/calendrier.png" alt="">
+                <img src="images/index/service-image/calendrier.png" alt="">
             </div>
         </section>
 
     </main>
 
+    <jsp:include page="components/footer.jsp" />
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    <script src="../landing-page/slider.js"></script>
+    <script src="script/slider.js"></script>
 </body>
 
 </html>

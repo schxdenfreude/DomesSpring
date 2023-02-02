@@ -21,7 +21,7 @@
 </head>
 
 <body>
-
+    <%@ include file="/components/header.jsp" %>
     <main>
         <div class="basket">
 
