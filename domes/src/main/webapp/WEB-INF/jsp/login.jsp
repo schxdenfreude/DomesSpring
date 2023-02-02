@@ -82,11 +82,31 @@
           <div class="inscript text-center d-block">
             <div class="w-75 m-auto mt-4 align-items-center text-white">
                 <h2>Pas de compte? inscrivez vous!</h2>
-                <br> 
+                <br>
+                <form:form class="" action = "/registerUser" method = "post" modelAttribute="client">
+                <label class="form-label" >Username</label>
+                     <form:input type ="text" path="loginUser"  class="form-control"/>
+                     <label class="form-label" >Prénom</label>
+                     <form:input type ="text" path="firstName" class="form-control"/>
+                     <label class="form-label" >Nom de famille</label>
+                     <form:input type ="text" path="lastName"  class="form-control"/>
+                     <label class="form-label" >Email</label>
+                     <form:input type ="mail" path="mail"  class="form-control"/>
+                     <label class="form-label" >Mot de passe</label>
+                     <form:input type ="password" path="passwordUser"  class="form-control"/>
+                     <label class="form-label">Adresse</label>
+                     <form:input type ="text" path="addressClient"  class="form-control"/>
+                     <label class="form-label">Ville</label>
+                     <form:input type ="text" path="city"  class="form-control"/>
+                     <label class="form-label">Code Postal</label>
+                     <form:input type ="text" path="cityCode" class="form-control"/>
+                     <input type ="submit" value="Envoyer"/>
+                 </form:form>
                 <p>Entrez vos informations personnelles et rejoignez nous dans notre aventure!</p>
                 <button type="button" class="btn btn-primary">Inscrivez vous</button>
             </div>
           </div>
+
     </main>
 </body>
 

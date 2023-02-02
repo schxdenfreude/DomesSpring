@@ -9,23 +9,77 @@ import javax.persistence.Id;
 import java.util.Date;
 
 @Entity
-public class Client {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id_user;
+public class Client extends User{
+    private String firstName;
 
-    private String first_name;
-
-    private String last_name;
+    private String lastName;
 
     @DateTimeFormat(pattern ="yyyy-MM-dd")
-    private Date creation_date;
-
+    private Date creationDate;
     private String mail;
 
-    private String address_client;
+    private String addressClient;
 
     private String city;
 
-    private String city_code;
+    private String cityCode;
+
+    public Client() {
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public Date getCreationDate() {
+        return creationDate;
+    }
+
+    public void setCreationDate(Date creationDate) {
+        this.creationDate = creationDate;
+    }
+
+    public String getMail() {
+        return mail;
+    }
+
+    public void setMail(String mail) {
+        this.mail = mail;
+    }
+
+    public String getAddressClient() {
+        return addressClient;
+    }
+
+    public void setAddressClient(String addressClient) {
+        this.addressClient = addressClient;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public String getCityCode() {
+        return cityCode;
+    }
+
+    public void setCityCode(String cityCode) {
+        this.cityCode = cityCode;
+    }
 }

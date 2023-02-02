@@ -1,5 +1,6 @@
 package com.example.domes.controllers;
 
+import com.example.domes.beans.Client;
 import com.example.domes.beans.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,5 +23,10 @@ public class HomeController {
     @ModelAttribute("user")
     public User getDefaultUser(){
         return new User();
+    }
+
+    @ModelAttribute("client")
+    public Client getDefaultClient(){
+        return new Client();
     }
 }
