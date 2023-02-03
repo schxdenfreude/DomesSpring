@@ -1,5 +1,4 @@
 package com.example.domes.service;
-
 import com.example.domes.beans.User;
 import com.example.domes.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -5,6 +5,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 import javax.persistence.*;
 import java.util.Date;
 
+@Entity
 public class Orders {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -12,7 +13,7 @@ public class Orders {
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date orderDate;
     @ManyToOne
-    private int idState;
+    private OrderState orderState;
 
     public int getId() {
         return id;
@@ -30,11 +31,11 @@ public class Orders {
         this.orderDate = orderDate;
     }
 
-    public int getIdState() {
-        return idState;
+    public OrderState getOrderState() {
+        return orderState;
     }
 
-    public void setIdState(int idState) {
-        this.idState = idState;
+    public void setOrderState(OrderState orderState) {
+        this.orderState = orderState;
     }
 }

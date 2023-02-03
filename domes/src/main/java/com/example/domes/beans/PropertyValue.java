@@ -1,13 +1,18 @@
 package com.example.domes.beans;
 
-import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
+import org.hibernate.mapping.Property;
 
-public class property_value {
+import javax.persistence.*;
+import java.util.List;
+
+@Entity
+public class PropertyValue {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int idValue;
     private String propertyValue;
     @OneToMany
-    private int idProperty;
+    private List<Properties> idProperty;
 
     public int getIdValue() {
         return idValue;
@@ -25,11 +30,11 @@ public class property_value {
         this.propertyValue = propertyValue;
     }
 
-    public int getIdProperty() {
+    public List<Properties> getIdProperty() {
         return idProperty;
     }
 
-    public void setIdProperty(int idProperty) {
+    public void setIdProperty(List<Properties> idProperty) {
         this.idProperty = idProperty;
     }
 }
