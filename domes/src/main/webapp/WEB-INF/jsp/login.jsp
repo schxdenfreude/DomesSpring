@@ -21,7 +21,7 @@
      <jsp:include page="components/header.jsp" />
 
     <main class="m-auto w-75 mt-5 container d-grid formul ">
-        <form:form class="w-100 m-auto text-dark bg-white px-5 d-flex justify-content-center login" action ="/loginUser" method = "post" modelAttribute="user">
+        <form:form class="w-100 m-auto text-dark bg-white px-5 d-flex justify-content-center login" action ="/loginUser" method = "post" modelAttribute="client">
             <div class="w-75 formm">
             <!-- Email input -->
             <h2 class="text-center">Connectez vous!</h2>

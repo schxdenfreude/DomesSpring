@@ -20,11 +20,6 @@ public class HomeController {
         return "login";
     }
 
-    @ModelAttribute("user")
-    public User getDefaultUser(){
-        return new User();
-    }
-
     @ModelAttribute("client")
     public Client getDefaultClient(){
         return new Client();

@@ -16,10 +16,10 @@ public class LoginController {
     private ServiceLogin loginService;
 
     @PostMapping ("/loginUser")
-    public String loginUser(@ModelAttribute("newuser") User user, Model model){
-        User localuser = new User();
-        localuser = loginService.verifyLogin(user);
-        System.out.println(user.getPasswordUser());
+    public String loginUser(@ModelAttribute("client") Client client, Model model){
+        User localuser = new Client();
+        localuser = loginService.verifyLogin(client);
+        System.out.println(client.getPasswordUser());
 
         if(localuser == null){
             System.out.println("pzpzpz");
@@ -45,6 +45,6 @@ public class LoginController {
 
     @ModelAttribute("user")
     public User getDefaultUser(){
-        return new User();
+        return new Client();
     }
 }
