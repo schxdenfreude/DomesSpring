@@ -19,6 +19,8 @@ public class Products {
     @DateTimeFormat(pattern ="yyyy-MM-dd")
     private Date productCreation;
 
+    private String imagePath;
+
     @ManyToOne
     private Category category;
 
@@ -60,5 +62,13 @@ public class Products {
 
     public void setCategory(Category category) {
         this.category = category;
+    }
+
+    public String getImagePath() {
+        return imagePath;
+    }
+
+    public void setImagePath(String imagePath) {
+        this.imagePath = imagePath;
     }
 }

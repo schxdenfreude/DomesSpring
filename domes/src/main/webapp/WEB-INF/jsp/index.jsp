@@ -39,8 +39,8 @@
 
 
                         <div class="slider--card">
-                            <div class="img--card">
-                                <img src="images/index/chat-card.png" alt="">
+                            <div class="img--card " style="background-image: url('images/index/${liste.getImagePath()}'); ">
+
                             </div>
                             <div class="desc--card">
                                 <h2 class="title">${liste.getProductName()}<span class="value--price">1500e</span></h2>
