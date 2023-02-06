@@ -19,15 +19,16 @@ public class ServiceProductImpl implements ServiceProduct{
         this.productRepository = productRepository;
     }
 
-
+//Fonction qui choisit 5 animaux à montrer sur l'accueil
     public List<Products> homeCarousel(){
+        // marche pas
         int max = productRepository.countProducts();
-        System.out.println(max);
         List<Products> listProducts = new ArrayList<Products>();
         Random rand = new Random();
+        // Penser à changer une fois qu'on aura plus de produits
         int firstId = rand.nextInt(1);
-        System.out.println("firstif = " + firstId);
         int lastId;
+        //Marchera quand on aura plus de 5 produits
         if (firstId < 5){
              lastId = firstId + 5;
         }else{
@@ -35,7 +36,6 @@ public class ServiceProductImpl implements ServiceProduct{
             firstId = lastId - 5;
         }
         List<Products> listeProduits = productRepository.getProducts(firstId, lastId);
-        System.out.println(listeProduits);
         return listeProduits;
     }
 }

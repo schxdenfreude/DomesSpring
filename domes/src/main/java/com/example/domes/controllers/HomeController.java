@@ -20,6 +20,7 @@ public class HomeController {
     @GetMapping("/home")
     public String goHome(Model model){
         System.out.println("page home");
+        //choisir les animaux en facade
         List<Products> listeProduits = serviceProduct.homeCarousel();
         model.addAttribute("ListeCarousel",listeProduits);
         return "index";
