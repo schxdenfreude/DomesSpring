@@ -8,12 +8,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class LoginService {
+public class ServiceLoginImpl implements ServiceLogin{
     private UserRepository userRepository;
     private ClientRepository clientRepository;
 
     @Autowired
-    public LoginService(UserRepository userRepository, ClientRepository clientRepository) {
+    public ServiceLoginImpl(UserRepository userRepository, ClientRepository clientRepository) {
         this.userRepository = userRepository;
         this.clientRepository = clientRepository;
     }

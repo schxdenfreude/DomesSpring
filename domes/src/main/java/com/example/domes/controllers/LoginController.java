@@ -2,30 +2,24 @@ package com.example.domes.controllers;
 
 import com.example.domes.beans.Client;
 import com.example.domes.beans.User;
-import com.example.domes.repository.UserRepository;
-import com.example.domes.service.LoginService;
+import com.example.domes.service.ServiceLogin;
+import com.example.domes.service.ServiceLoginImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-
-import javax.sound.midi.SysexMessage;
-import java.awt.*;
-import java.util.ArrayList;
-import java.util.List;
 
 @Controller
 public class LoginController {
     @Autowired
-    private LoginService loginService;
+    private ServiceLogin loginService;
 
     @PostMapping ("/loginUser")
-    public String loginUser(@ModelAttribute("newuser") User user, Model model){
-        User localuser = new User();
-        localuser = loginService.verifyLogin(user);
-        System.out.println(user.getPasswordUser());
+    public String loginUser(@ModelAttribute("client") Client client, Model model){
+        User localuser = new Client();
+        localuser = loginService.verifyLogin(client);
+        System.out.println(client.getPasswordUser());
 
         if(localuser == null){
             System.out.println("pzpzpz");
@@ -51,6 +45,6 @@ public class LoginController {
 
     @ModelAttribute("user")
     public User getDefaultUser(){
-        return new User();
+        return new Client();
     }
 }
