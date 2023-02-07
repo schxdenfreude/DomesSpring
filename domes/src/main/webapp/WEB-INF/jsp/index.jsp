@@ -1,3 +1,4 @@
+<%@page pageEncoding="UTF-8" contentType="text/html; charset=UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -30,148 +31,13 @@
         <!-- Card Recommandation -->
         <div class="swiper mySwiperRecommandation">
             <div class="swiper-wrapper">
+
                 <div class="swiper-slide">
 
                     <section class="slider--recommandation">
                         <div class="slider--card">
                             <div class="img--card">
-                                <img src="images/index/chat-card.png" alt="">
-                            </div>
-                            <div class="desc--card">
-                                <h2 class="title">Chat / Maine Coon <span class="value--price">1500€</span></h2>
-                                <p class="age">Age : <span class="value--age">1 ans</span></p>
-                                <p class="color">Couleur : <span class="value--color">Tigré</span></p>
-                                <p class="character">Caractère : <span class="value--character"></span></p>
-                            </div>
-                        </div>
-                    </section>
-
-                </div>
-                <div class="swiper-slide">
-
-                    <section class="slider--recommandation">
-                        <div class="slider--card">
-                            <div class="img--card">
-                                <img src="images/index/chat-card.png" alt="">
-                            </div>
-                            <div class="desc--card">
-                                <h2 class="title">Chat / Maine Coon <span class="value--price">1500€</span></h2>
-                                <p class="age">Age : <span class="value--age">1 ans</span></p>
-                                <p class="color">Couleur : <span class="value--color">Tigré</span></p>
-                                <p class="character">Caractère : <span class="value--character"></span></p>
-                            </div>
-                        </div>
-                    </section>
-
-                </div>
-                <div class="swiper-slide">
-
-                    <section class="slider--recommandation">
-                        <div class="slider--card">
-                            <div class="img--card">
-                                <img src="images/index/chat-card.png" alt="">
-                            </div>
-                            <div class="desc--card">
-                                <h2 class="title">Chat / Maine Coon <span class="value--price">1500€</span></h2>
-                                <p class="age">Age : <span class="value--age">1 ans</span></p>
-                                <p class="color">Couleur : <span class="value--color">Tigré</span></p>
-                                <p class="character">Caractère : <span class="value--character"></span></p>
-                            </div>
-                        </div>
-                    </section>
-
-                </div>
-                <div class="swiper-slide">
-
-                    <section class="slider--recommandation">
-                        <div class="slider--card">
-                            <div class="img--card">
-                                <img src="images/index/chat-card.png" alt="">
-                            </div>
-                            <div class="desc--card">
-                                <h2 class="title">Chat / Maine Coon <span class="value--price">1500€</span></h2>
-                                <p class="age">Age : <span class="value--age">1 ans</span></p>
-                                <p class="color">Couleur : <span class="value--color">Tigré</span></p>
-                                <p class="character">Caractère : <span class="value--character"></span></p>
-                            </div>
-                        </div>
-                    </section>
-
-                </div>
-                <div class="swiper-slide">
-
-                    <section class="slider--recommandation">
-                        <div class="slider--card">
-                            <div class="img--card">
-                                <img src="images/index/chat-card.png" alt="">
-                            </div>
-                            <div class="desc--card">
-                                <h2 class="title">Chat / Maine Coon <span class="value--price">1500€</span></h2>
-                                <p class="age">Age : <span class="value--age">1 ans</span></p>
-                                <p class="color">Couleur : <span class="value--color">Tigré</span></p>
-                                <p class="character">Caractère : <span class="value--character"></span></p>
-                            </div>
-                        </div>
-                    </section>
-
-                </div>
-                <div class="swiper-slide">
-
-                    <section class="slider--recommandation">
-                        <div class="slider--card">
-                            <div class="img--card">
-                                <img src="images/index/chat-card.png" alt="">
-                            </div>
-                            <div class="desc--card">
-                                <h2 class="title">Chat / Maine Coon <span class="value--price">1500€</span></h2>
-                                <p class="age">Age : <span class="value--age">1 ans</span></p>
-                                <p class="color">Couleur : <span class="value--color">Tigré</span></p>
-                                <p class="character">Caractère : <span class="value--character"></span></p>
-                            </div>
-                        </div>
-                    </section>
-
-                </div>
-                <div class="swiper-slide">
-
-                    <section class="slider--recommandation">
-                        <div class="slider--card">
-                            <div class="img--card">
-                                <img src="images/index/chat-card.png" alt="">
-                            </div>
-                            <div class="desc--card">
-                                <h2 class="title">Chat / Maine Coon <span class="value--price">1500€</span></h2>
-                                <p class="age">Age : <span class="value--age">1 ans</span></p>
-                                <p class="color">Couleur : <span class="value--color">Tigré</span></p>
-                                <p class="character">Caractère : <span class="value--character"></span></p>
-                            </div>
-                        </div>
-                    </section>
-
-                </div>
-                <div class="swiper-slide">
-
-                    <section class="slider--recommandation">
-                        <div class="slider--card">
-                            <div class="img--card">
-                                <img src="images/index/index/chat-card.png" alt="">
-                            </div>
-                            <div class="desc--card">
-                                <h2 class="title">Chat / Maine Coon <span class="value--price">1500€</span></h2>
-                                <p class="age">Age : <span class="value--age">1 ans</span></p>
-                                <p class="color">Couleur : <span class="value--color">Tigré</span></p>
-                                <p class="character">Caractère : <span class="value--character"></span></p>
-                            </div>
-                        </div>
-                    </section>
-
-                </div>
-                <div class="swiper-slide">
-
-                    <section class="slider--recommandation">
-                        <div class="slider--card">
-                            <div class="img--card">
-                                <img src="images/index/index/chat-card.png" alt="">
+                            <div class="img--card-url" style="background-image:url(images/index/chat-card.png"></div>
                             </div>
                             <div class="desc--card">
                                 <h2 class="title">Chat / Maine Coon <span class="value--price">1500€</span></h2>

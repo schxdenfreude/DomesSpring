@@ -6,7 +6,9 @@
                 <div class="header--logo">
                     <img src="images/multi-page/logo.png" alt="domes">
                 </div>
+                <a class="a--no-style" href="/home">
                 <h2>domes</h2>
+                </a>
                 <div class="profil">
                     <div class="navbar fixed-top">
                         <div class="container-fluid">
@@ -134,7 +136,8 @@
                     <a class="profil-none" href="/login">Connexion</a>
                     <span class="profil-none"> | </span>
                     <a class="profil-none" href="#">Inscription</a>
-                    <a class="profil-none" href="/domes/pages/panier.jsp">Panier</a>
+                    <span class="profil-none"> | </span>
+                    <a class="profil-none" href="/panier">Panier</a>
                 </div>
             </div>
             <div class="flex--header">
@@ -148,7 +151,7 @@
                             <div class="dropdown-content" style="left:0;">
                                 <a href="#">Link 1</a>
                                 <a href="#">Link 2</a>
-                                <a href="${pageContext.servletContext.contextPath}/pages/panier.jsp">Link 3</a>
+                                <a href="/panier">Link 3</a>
                             </div>
                         </div>
 
