@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import java.util.Random;
 
 @Service
@@ -37,5 +38,12 @@ public class ServiceProductImpl implements ServiceProduct{
         }
         List<Products> listeProduits = productRepository.getProducts(firstId, lastId);
         return listeProduits;
+    }
+
+
+    public Optional<Products> showProduct(int i){
+        Optional<Products> product;
+        product = productRepository.findById(i);
+        return product;
     }
 }

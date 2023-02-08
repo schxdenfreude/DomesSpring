@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 
 import java.util.List;
+import java.util.Optional;
 
 @Controller
 public class HomeController {
@@ -30,6 +31,18 @@ public class HomeController {
     public String goLogin(){
         System.out.println("page login");
         return "login";
+    }
+
+    @GetMapping("/product")
+    public String goProduct(Model model){
+        System.out.println("page product");
+        // Penser  à gérer le post du bouton
+        Optional<Products> products =  serviceProduct.showProduct(1);
+        products.ifPresentOrElse(
+                product -> model.addAttribute("product",product),
+                () -> model.addAttribute("message","le produit n'existe plus")
+        );
+        return "product";
     }
 
     @ModelAttribute("client")
