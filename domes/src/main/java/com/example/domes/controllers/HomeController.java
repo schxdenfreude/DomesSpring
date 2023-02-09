@@ -37,7 +37,8 @@ public class HomeController {
     public String goProduct(Model model){
         System.out.println("page product");
         // Penser  à gérer le post du bouton
-        Optional<Products> products =  serviceProduct.showProduct(1);
+        Optional<Products> products =  serviceProduct.showProduct(3);
+        System.out.println(products);
         products.ifPresentOrElse(
                 product -> model.addAttribute("product",product),
                 () -> model.addAttribute("message","le produit n'existe plus")
