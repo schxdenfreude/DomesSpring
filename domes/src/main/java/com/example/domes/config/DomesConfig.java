@@ -13,7 +13,7 @@ import org.springframework.web.servlet.view.JstlView;
 public class DomesConfig extends WebMvcConfigurationSupport {
     @Override
     protected void addResourceHandlers(ResourceHandlerRegistry registry){
-        registry.addResourceHandler("css/**","images/**","script/**").addResourceLocations("classpath:/static/css/", "classpath:/static/images/", "classpath:/ static/script/");
+        registry.addResourceHandler("css/**","images/**","script/**").addResourceLocations("classpath:/static/css/", "classpath:/static/images/", "classpath:/static/script/");
     }
     @Bean
     public InternalResourceViewResolver jspViewResolver(){
@@ -21,6 +21,8 @@ public class DomesConfig extends WebMvcConfigurationSupport {
         viewResolver.setPrefix("/WEB-INF/jsp/");
         viewResolver.setSuffix(".jsp");
         viewResolver.setViewClass(JstlView.class);
+
         return viewResolver;
     }
+
 }

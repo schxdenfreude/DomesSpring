@@ -7,6 +7,9 @@ var swiper = new Swiper(".mySwiperRecommandation", {
     loop: true,
     loopFillGroupWithBlank: true,
     slidesPerView: 3,
+    centeredSlides: true,
+        roundLengths: true,
+        loop: true,
     spaceBetween: 30,
     pagination: false,
     breakpoints: {

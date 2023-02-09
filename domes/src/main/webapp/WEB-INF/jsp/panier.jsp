@@ -1,27 +1,25 @@
-<%@page import="org.apache.jasper.tagplugins.jstl.core.ForEach"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ page import="frdomeswww.service.ServicePanier"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <!DOCTYPE html>
-<jsp:useBean id="sp" class="frdomeswww.service.ServicePanier" scope = "session"/>
-<%@page import="org.apache.jasper.tagplugins.jstl.core.ForEach"%>
+
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="asset/css/panier.css" rel="stylesheet" >
+    <link href="css/panier.css" rel="stylesheet" >
+    <link href="css/header.css" rel="stylesheet" >
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-    <script src="../panier/panier.js"></script>
+    <script src="script/panier.js"></script>
     <title>Document</title>
 </head>
 
 <body>
-    <%@ include file="/components/header.jsp" %>
+    <%@ include file="components/header.jsp" %>
     <main>
         <div class="basket">
 
@@ -48,7 +46,7 @@
                     <div class="product-details">
                         <h6><span class="item-quantity">1 x</span> <c:out value ="${i.breed}"/></h6>
                         <p class="p"><c:out value ="${i.name}"/>, <c:out value ="${i.coat}"/> ans</p>
-                        <p class="p">VaccinÃ©(e) : Oui</p>
+                        <p class="p">Vacciné(e) : Oui</p>
                     </div>
                 </div>
                 <div class="price"><c:out value ="${i.price}"/></div>
