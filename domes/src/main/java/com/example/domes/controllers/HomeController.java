@@ -31,11 +31,7 @@ public class HomeController {
         System.out.println("page panier");
         return "panier";
     }
-    @GetMapping("/product")
-    public String goProduct(){
-        System.out.println("page product");
-        return "product";
-    }
+
     @GetMapping("/login")
     public String goLogin(){
         System.out.println("page login");
