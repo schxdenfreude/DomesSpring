@@ -7,9 +7,9 @@ import java.io.Serializable;
 
 public class CategoriesPropertiesPK implements Serializable {
 
-    @ManyToOne
+    @OneToOne
     private Category category;
 
-    @ManyToOne
+    @OneToOne
     private Properties properties;
 }

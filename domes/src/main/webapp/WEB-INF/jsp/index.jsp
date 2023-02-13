@@ -18,10 +18,21 @@
      <jsp:include page="components/header.jsp" />
 
     <main>
+    <section class="slider--container slider--img-landing">
+                <div class="slider--config">
+                    <div class="swiper mySwiperCat swiper-container-free-mode">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="images/index/chat.jpg" alt=""></div>
+                            <div class="swiper-slide"><img src="images/index/chat2.png" alt=""></div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </section>
+
         <!-- Image top  -->
-        <section class="slider--img-landing">
-            <img src="images/index/chat.jpg" alt="">
-        </section>
+
+
 
         <!-- Recommandation -->
         <div class="text--between">

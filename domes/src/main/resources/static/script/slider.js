@@ -55,3 +55,11 @@ var swiper = new Swiper(".mySwiperAnimal", {
     },
 
 });
+
+var swiper = new Swiper(".mySwiperCat", {
+ centeredSlides: true,
+     loop: true,
+     loopedSlides: 2,
+     slidesPerView: 'auto',
+});
+
