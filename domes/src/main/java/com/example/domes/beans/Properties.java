@@ -1,9 +1,7 @@
 package com.example.domes.beans;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.List;
 
 @Entity
 public class Properties {
@@ -13,6 +11,9 @@ public class Properties {
     private Long idProperty;
 
     private String propertyName;
+
+    @OneToMany
+    private List<PropertyValue> valueList;
 
     public Long getIdProperty() {
         return idProperty;

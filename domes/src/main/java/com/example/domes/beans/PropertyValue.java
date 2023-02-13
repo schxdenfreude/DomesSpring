@@ -11,8 +11,9 @@ public class PropertyValue {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int idValue;
     private String propertyValue;
-    @OneToMany
-    private List<Properties> idProperty;
+
+    @ManyToOne
+    private Properties property;
 
     public int getIdValue() {
         return idValue;
@@ -30,11 +31,5 @@ public class PropertyValue {
         this.propertyValue = propertyValue;
     }
 
-    public List<Properties> getIdProperty() {
-        return idProperty;
-    }
 
-    public void setIdProperty(List<Properties> idProperty) {
-        this.idProperty = idProperty;
-    }
 }

@@ -1,5 +1,6 @@
 <%@page pageEncoding="UTF-8" contentType="text/html; charset=UTF-8"%>
 <!DOCTYPE html>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
 <meta charset="UTF-8">
@@ -24,11 +25,15 @@
           </nav>
         </div>
       </div>
+
+
+      <c:if test="${!empty(product)}">
       <div class="grid product">
+
         <div class="column-xs-12 column-md-7">
           <div class="product-gallery">
             <div class="product-image">
-              <img class="active" src="images/index/chat.jpg">
+              <img class="active" src="images/index/${product.getImagePath()}">
             </div>
             <ul class="image-list">
               <li class="image-item"><img src="images/index/chat.jpg"></li>
@@ -38,15 +43,18 @@
           </div>
         </div>
         <div class="column-xs-12 column-md-5">
-          <h1>Bonsai</h1>
+          <h1>${product.getProductName()}</h1>
           <h2>19.99€</h2>
           <div class="description">
-            <p>Le chat est un mammifère de la famille de félidés. Il pèse en moyenne 2,5 à 4,5 kg et mesure entre 66 et 76 cm avec la queue.</p>
-            <p>Ses pattes sont pourvues de griffes rétractiles. Elles ont à leur base des coussinets constitués d une membrane élastique qui leur permet de se déplacer sans faire de bruit. Le pelage du chat est composé de poils de longueur variable selon les races.</p>
+            <p>${product.getProductDescription()}</p>
           </div>
           <button class="add-to-cart">Ajouter au panier</button>
         </div>
+
       </div>
+      </c:if>
+
+
       <div class="grid related-products">
         <div class="column-xs-12">
           <h3>Voir également ... </h3>

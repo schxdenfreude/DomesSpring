@@ -144,6 +144,14 @@ main {
     width: 100%;
 }
 
+.img--card {
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 25vh;
+
+}
+
 @media screen and (max-width:768px) {
     main {
         margin: 5vw;

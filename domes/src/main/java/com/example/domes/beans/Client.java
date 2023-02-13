@@ -9,25 +9,22 @@ import javax.persistence.Id;
 import java.util.Date;
 
 @Entity
-public class Client {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private int idUser;
+public class Client extends User{
     private String firstName;
+
     private String lastName;
-    @DateTimeFormat(pattern = "yyyy-MM-dd")
+
+    @DateTimeFormat(pattern ="yyyy-MM-dd")
     private Date creationDate;
     private String mail;
+
     private String addressClient;
+
     private String city;
+
     private String cityCode;
 
-    public int getIdUser() {
-        return idUser;
-    }
-
-    public void setIdUser(int idUser) {
-        this.idUser = idUser;
+    public Client() {
     }
 
     public String getFirstName() {
