@@ -36,7 +36,7 @@
 
         <!-- Recommandation -->
         <div class="text--between">
-            <p>Recommandations</p>
+            <p>RecommandationsS</p>
         </div>
 
         <!-- Card Recommandation -->
