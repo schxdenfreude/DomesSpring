@@ -8,10 +8,10 @@ import java.util.Objects;
 
 public class CategoriesPropertiesPK implements Serializable {
 
-    @ManyToOne
+    @OneToOne
     private Category category;
 
-    @ManyToOne
+    @OneToOne
     private Properties properties;
     @Override
     public boolean equals(Object o) {
