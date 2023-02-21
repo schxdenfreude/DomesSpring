@@ -1,0 +1,164 @@
+main {
+    margin: 0 5vw;
+    width: 90vw;
+}
+.swiper-slide {
+  display:flex;
+  align-items: center;
+  justify-content:center;
+  transition:all 200ms linear;
+  }
+.slider--img-landing {
+    width: 100%;
+    margin-top: 7vh;
+}
+
+.slider--img-landing img {
+    width: 100%;
+}
+
+
+/* Recommandations titre */
+.text--between {
+    margin: 5vh 0;
+    width: 100%;
+}
+
+.text--between p {
+    font-size: 3vw;
+    font-size: max(18px);
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* Recommandations Card */
+
+.slider--card {
+    max-width: 300px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+}
+
+/* Grid card "NOS ANIMAUX" */
+.slider--container {
+    background-color: rgb(240, 240, 240);
+    padding: 2vw;
+}
+
+.slider--config {
+    /* height: 100vh; */
+    position: relative;
+    background: #eee;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+
+.swiper--grid {
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.swiper-slide--grid {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.swiper-slide--grid img {
+   max-width: 200px;
+   min-width: 100px;
+   width: calc(100 - 10vw);
+}
+.swiper-grid-column > .swiper-wrapper{ flex-direction: unset !important; }
+/* NOS SERVICES */
+.services {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* background-image: url("../landing-page/images/footer-noel.jpg"); */
+    height: calc(100% + 50px);
+
+}
+
+.container--services {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 33%;
+}
+
+.container--services img {
+    max-width: 60px;
+    width: 20vw;
+}
+
+.container--services p {
+    text-align: center;
+    font-size: clamp(10px, 10px + 0.5vw, 10px + 1vw);
+}
+
+/* POUR VOUS ACCOMPAGNER */
+.services--additional {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(3, 33%);
+    grid-template-rows: repeat(3, 0.1fr);
+    grid-row-gap: 30px;
+}
+
+.img {
+    display: inline-grid;
+    justify-content: center;
+    width: calc(100% - 10vw);
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.img img {
+    width: 100%;
+}
+
+.img--card {
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 25vh;
+
+}
+
+@media screen and (max-width:768px) {
+    main {
+        margin: 5vw;
+        width: 90vw;
+    }
+
+    .slider--img-landing {
+        margin-top: 4vh;
+    }
+}
+@media screen and (max-width:1024px) {
+   
+    .services--additional{
+        grid-template-columns: repeat(2, 50%);
+        
+    }
+}

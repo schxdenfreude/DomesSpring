@@ -1,0 +1,341 @@
+@import url('https://rsms.me/inter/inter.css');
+@import url(https://fonts.googleapis.com/css?family=Lato:100,300,400,700);
+@import url(https://raw.github.com/FortAwesome/Font-Awesome/master/docs/assets/css/font-awesome.min.css);
+
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+}
+
+header {
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+}
+
+.header-height {
+    max-height: 120px;
+    min-height: 100px;
+    height: 16vw;
+}
+
+.header {
+    display: flex;
+    position: relative;
+    background-color: #fff;
+    max-height: 120px;
+    min-height: 100px;
+    height: 16vw;
+    width: 100vw;
+    /* filter pour utiliser le même box-shadow de figma (j'aurais aussi pu utiliser box-shadow */
+    filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.25));
+}
+
+.header--logo {
+    display: inline-flex;
+    align-items: center;
+    position: absolute;
+    height: 100%;
+    width: 300px;
+    margin: 0 0 0 2%;
+    left: 0;
+}
+
+.header--logo>img {
+    height: 100%;
+}
+
+.top--domes-profil {
+    display: inline-flex;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: 60%;
+    /* Calcule de la largeur - la largeur de la div "header--logo" */
+    /* width: calc(100% - 300px - 2%); */
+}
+
+.top--domes-hidden {
+
+    height: 60%;
+    width: 100%;
+}
+
+.bottom--domes-show {
+    display: inline-flex;
+    height: 40%;
+    width: 100%;
+    background-color: #3586ff;
+}
+
+.bottom--domes-left {
+    transition-duration: 1s;
+    width: 70%;
+    height: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+    margin: 0 0 0 7%;
+}
+
+.width--animate {
+    width: 30% !important;
+}
+
+.bottom--domes-right {
+    transition-duration: 1s;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 23%;
+    height: 100%;
+}
+
+/* .bottom--domes-right input {
+    width: 70%;
+    height: 60%;
+    font-size: 1.5rem;
+    padding: 1rem;
+} */
+
+.bottom--domes-right label {
+    position: relative;
+}
+
+.bottom--domes-right label:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: -moz-available;
+    width: -webkit-fill-available;
+    width: fill-available;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' x='0px' y='0px'%0Awidth='30' height='30'%0AviewBox='0 0 30 30'%3E%3Cpath d='M 13 3 C 7.4889971 3 3 7.4889971 3 13 C 3 18.511003 7.4889971 23 13 23 C 15.396508 23 17.597385 22.148986 19.322266 20.736328 L 25.292969 26.707031 A 1.0001 1.0001 0 1 0 26.707031 25.292969 L 20.736328 19.322266 C 22.148986 17.597385 23 15.396508 23 13 C 23 7.4889971 18.511003 3 13 3 z M 13 5 C 17.430123 5 21 8.5698774 21 13 C 21 17.430123 17.430123 21 13 21 C 8.5698774 21 5 17.430123 5 13 C 5 8.5698774 8.5698774 5 13 5 z'%3E%3C/path%3E%3C/svg%3E");
+    background-repeat: no-repeat
+}
+
+.flex--header {
+    width: 100%;
+}
+
+.top--domes-profil h2 {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: clamp(2rem, 2vw, 4rem);
+    margin: 0 !important;
+}
+.a--no-style,.a--no-style:hover,.a--no-style:active{
+color: black;
+text-decoration: none;
+}
+
+
+.profil {
+    position: absolute;
+    right: 2%;
+}
+
+.profil a,
+span {
+    font-size: clamp(0.5rem, 0.8rem + 0.1vw, 1.5rem);
+    color: black;
+    text-decoration: none;
+    list-style: none;
+}
+
+.bottom--domes {
+    width: 100%;
+    height: 40%;
+    bottom: 0;
+}
+
+/* search bar */
+
+#wrap {
+    display: inline-block;
+    position: relative;
+    height: 100%;
+    width: 93%;
+    float: right;
+    padding: 0;
+    position: relative;
+}
+
+#search {
+    transition-duration: 1s;
+    height: 100%;
+    font-size: min(1.7vw, 20px);
+    display: inline-block;
+    font-weight: 100;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 3px;
+    padding-right: 60px;
+    width: 0px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: none;
+    z-index: 3;
+
+    cursor: pointer;
+}
+
+#search:focus:hover {
+    border-bottom: 1px solid black;
+}
+
+#search:focus {
+    width: 100%;
+    z-index: 1;
+    border-bottom: 1px solid white;
+    cursor: text;
+}
+
+#search:focus .bottom--domes-right {
+    width: 30%;
+}
+
+#search:focus .bottom--domes-left {
+    width: 70%;
+    margin: 0 !important;
+}
+
+.search-submit {
+    transition-duration: ease-out 0.5s;
+    height: 100%;
+    width: 63px;
+    display: inline-block;
+    color: red;
+    float: right;
+   /*  background: url('../landing-page/images/loupe.png') center center no-repeat; */
+    text-indent: -10000px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    cursor: pointer;
+    cursor: pointer;
+    padding: 0 !important;
+    background-size: 2rem;
+}
+
+.search-submit:hover {
+    opacity: 0.8;
+}
+
+/* HAMBURGER */
+.offcanvas-title {
+    text-transform: uppercase;
+}
+
+.offcanvas-header {
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.1) !important;
+}
+
+.navbar {
+    display: none !important;
+}
+
+/* menu déroulant */
+.dropbtn {
+    color: white;
+    font-size: clamp(0.9rem, 1.3rem - 0.8vw, 1.3rem);
+    border: none;
+    cursor: pointer;
+    height: 100%;
+    background-color: transparent;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    height: 100%;
+}
+
+.dropdown-content {
+    background-color: #fff;
+    display: none;
+    position: absolute;
+    right: 0;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.5);
+}
+
+.promo-code-field {
+    border: 1px solid #ccc;
+    padding: 0.5rem;
+    text-transform: uppercase;
+    transition: all 0.2s linear;
+    width: 48%;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    -o-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+}
+
+@media screen and (max-width: 768px) {
+    .profil-none {
+        display: none;
+    }
+
+    .navbar {
+        display: block !important;
+        background-color: white !important;
+    }
+
+    .fixed-top {
+        position: unset !important;
+        right: 0 !important;
+        left: 0 !important;
+    }
+
+    #offcanvasNavbar {
+        height: fit-content;
+    }
+
+    .bottom--domes-show {
+        display: none;
+    }
+
+    .top--domes-profil {
+        height: 100%;
+    }
+
+    .header--logo>img {
+        height: calc(100% - 3vw);
+    }
+}

@@ -1,0 +1,36 @@
+@charset "UTF-8";
+/* *{
+    color: white;
+
+} */
+body{
+    background: rgb(214,238,254);
+    background: linear-gradient(180deg, rgba(214,238,254,1) 0%, rgba(214,238,254,1) 35%, rgba(0,212,255,1) 100%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.inscript{
+    background-color: #5597FF;
+    border-radius: 0 10px 10px 0;
+}
+
+.login{
+    border-radius: 10px 0 0 10px;
+}
+
+.formul{
+    display: grid;
+
+}
+
+
+@media (max-width: 800px) {
+    .formul { grid-template-rows: repeat(1, 1fr); }
+    .inscript{ border-radius: 0 0% 10px 10px;}
+  }
+
+  @media (min-width: 800px) {
+    .formul { grid-template-columns: repeat(2, 1fr); }
+  }
