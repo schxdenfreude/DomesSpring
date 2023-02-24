@@ -1,4 +1,4 @@
-FROM ubuntu
+FROM tomcat:9.0
 RUN apt-get update -y
 RUN apt-get install wget -y
 RUN wget https://download.oracle.com/java/19/latest/jdk-19_linux-x64_bin.deb
