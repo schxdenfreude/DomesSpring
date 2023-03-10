@@ -1,13 +1,15 @@
-<%@page pageEncoding="UTF-8" contentType="text/html; charset=UTF-8"%>
 <!DOCTYPE html>
+<%@page pageEncoding="UTF-8" contentType="text/html; charset=UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="i" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>NOM PRODUIT</title>
+<title>${product.getProductName()}</title>
     <link rel="stylesheet" href="css/product.css" >
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 </head>
 <body>
@@ -20,7 +22,7 @@
             <ol class="breadcrumb-list">
               <li class="breadcrumb-item"><a href="#">Accueil</a></li>
               <li class="breadcrumb-item"><a href="#">Produit</a></li>
-              <li class="breadcrumb-item active">NOM PRODUIT</li>
+              <li class="breadcrumb-item active">${product.getProductName()}</li>
             </ol>
           </nav>
         </div>
@@ -36,20 +38,30 @@
               <img class="active" src="images/index/${product.getImagePath()}">
             </div>
             <ul class="image-list">
-              <li class="image-item"><img src="images/index/chat.jpg"></li>
-              <li class="image-item"><img src="images/index/chat-card.png"></li>
-              <li class="image-item"><img src="images/index/chat-card.png"></li>
+
+              <li class="image-item"><img src="images/index/${product.getImagePath()}"></li>
+              <c:if test="${not empty product.imagePathTwo}">
+                <li class="image-item"><img src="images/index/${product.getImagePathTwo()}"></li>
+              </c:if>
+              <c:if test="${not empty product.imagePathThree}">
+                <li class="image-item"><img src="images/index/${product.getImagePathThree()}"></li>
+              </c:if>
             </ul>
           </div>
         </div>
+
         <div class="column-xs-12 column-md-5">
-          <h1>${product.getProductName()}</h1>
-          <h2>19.99€</h2>
-          <div class="description">
-            <p>${product.getProductDescription()}</p>
-          </div>
-          <button class="add-to-cart">Ajouter au panier</button>
-        </div>
+        <form action="ajouter-produit/${product.idProduct}" method="post" class="form--product">
+                <h1>${product.productName}</h1>
+                <h2>${product.price}€</h2>
+                <div class="description">
+                <p>${product.productDescription}</p>
+                </div>
+                <input type="number" name="quantite" value="1" min="1"/>
+                <input type="submit" class="add-to-cart" value="Ajouter au panier">
+                </form>
+           </div>
+
 
       </div>
       </c:if>

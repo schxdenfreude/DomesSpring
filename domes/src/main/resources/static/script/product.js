@@ -1,5 +1,8 @@
 const activeImage = document.querySelector(".product-image .active");
 const productImages = document.querySelectorAll(".image-list img");
+const redirectButton = document.querySelector(".add-to-cart");
+
+
 
 function changeImage(e) {
   activeImage.src = e.target.src;

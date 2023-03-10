@@ -12,6 +12,10 @@
 	 flex-direction: column;
 	 flex-flow: row wrap;
 }
+
+.form--product > h1{
+text-transform: Capitalize;
+}
  .grid > [class*=column-] {
 	 display: block;
 }
@@ -624,6 +628,8 @@ padding-left:0 !important;
  .image-list li {
 	 margin: 0;
 }
+
+
  @media (min-width: 62rem) {
 	 .product-image img, .image-list img {
 		 width: 100%;
@@ -641,6 +647,9 @@ padding-left:0 !important;
 	 .image-list {
 		 display: flex;
 		 overflow: hidden;
+	}
+	.image-list li:last-child{
+	margin:0 !important;
 	}
 	 .image-list li {
 		 margin: 0 0.75rem 0 0;

@@ -16,4 +16,5 @@ public interface ProductRepository extends CrudRepository<Products, Integer> {
 
     @Query("SELECT p FROM Products p WHERE p.id > :firstId AND p.id < :lastId")
     public List<Products> getProducts(@Param("firstId") int firstId, @Param("lastId") int lastId);
+
 }

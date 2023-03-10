@@ -26,4 +26,5 @@ public class CategoriesPropertiesPK implements Serializable {
     public int hashCode() {
         return Objects.hash(category, properties);
     }
+
 }

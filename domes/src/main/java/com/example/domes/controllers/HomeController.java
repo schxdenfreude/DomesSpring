@@ -9,6 +9,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.List;
 import java.util.Optional;
@@ -32,6 +34,7 @@ public class HomeController {
         return "panier";
     }
 
+
     @GetMapping("/login")
     public String goLogin(){
         System.out.println("page login");
@@ -43,7 +46,7 @@ public class HomeController {
         System.out.println("page product");
         // Penser  à gérer le post du bouton
         Optional<Products> products =  serviceProduct.showProduct(1);
-        System.out.println(products);
+//        System.out.println(products);
         products.ifPresentOrElse(
                 product -> model.addAttribute("product",product),
                 () -> model.addAttribute("message","le produit n'existe plus")
