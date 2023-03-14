@@ -11,6 +11,7 @@ public class Category {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @
     private int idCategory;
 
     private String categoryName;

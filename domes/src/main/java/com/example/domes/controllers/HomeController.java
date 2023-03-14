@@ -3,6 +3,8 @@ package com.example.domes.controllers;
 import com.example.domes.beans.Client;
 import com.example.domes.beans.Products;
 import com.example.domes.beans.User;
+import com.example.domes.service.ServiceInventory;
+import com.example.domes.service.ServiceInventoryImpl;
 import com.example.domes.service.ServiceProduct;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -19,6 +21,10 @@ import java.util.Optional;
 public class HomeController {
     @Autowired
     private ServiceProduct serviceProduct;
+
+    @Autowired
+    private ServiceInventory serviceInventory;
+
 
     @GetMapping("/home")
     public String goHome(Model model){
@@ -43,15 +49,21 @@ public class HomeController {
 
     @GetMapping("/product")
     public String goProduct(Model model){
-        System.out.println("page product");
         // Penser  à gérer le post du bouton
         Optional<Products> products =  serviceProduct.showProduct(1);
-//        System.out.println(products);
         products.ifPresentOrElse(
                 product -> model.addAttribute("product",product),
                 () -> model.addAttribute("message","le produit n'existe plus")
         );
         return "product";
+    }
+
+    @GetMapping("/inventory")
+    public String goInventory(Model model) {
+        List<Products> listProducts = serviceInventory.getProducts();
+        System.out.println("page inventaire");
+        model.addAttribute("ListeProduits",listProducts);
+        return "inventory";
     }
 
     @ModelAttribute("client")

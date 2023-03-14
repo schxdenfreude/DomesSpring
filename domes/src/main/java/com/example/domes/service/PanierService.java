@@ -76,18 +76,12 @@ public class PanierService {
             LigneDeCommande ligne = optionalLigne.get();
             Panier panier = optionalPanier.get();
 
-//            System.out.println("Ligne de commande à supprimer : " + ligne);
-//            System.out.println("Panier avant suppression : " + panier);
 
             boolean removed = panier.getLignesDeCommande().remove(ligne);
-
-//            System.out.println("La ligne de commande a été supprimée du panier : " + removed);
-
             if (removed) {
                 panierRepository.save(panier);
                 ligneDeCommandeRepository.delete(ligne);
                 session.setAttribute("panier", panier);
-//                System.out.println("Panier après suppression : " + panier);
             } else {
                 System.out.println("La ligne de commande n'a pas été trouvée dans le panier.");
             }
