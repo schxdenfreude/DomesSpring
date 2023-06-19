@@ -134,6 +134,9 @@
                         <div class="dropdown-menu dropdown-menu-right rounded-0" aria-labelledby="messages">
                             <a class="dropdown-item" href="/login">Connexion</a>
                             <a class="dropdown-item" href="/login">Inscription</a>
+                            <c:if test="">
+
+                            </c:if>
                         </div>
                     </div>
 

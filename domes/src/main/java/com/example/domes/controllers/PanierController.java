@@ -38,20 +38,26 @@ public class PanierController {
     // Appel de la méthode ajouterLigneDeCommande pour ajouter un produit au panier
     @PostMapping("/ajouter-produit/{idProduct}")
     public String ajouterProduitDansPanier(@PathVariable int idProduct, @RequestParam("quantite") int quantite, HttpSession session) {
-
         Panier panier = (Panier) session.getAttribute("panier");
         if (panier == null) {
-//            System.out.println("panier == null");
             panier = new Panier();
             session.setAttribute("panier", panier);
         }
 
-//        System.out.println("panier != null");
-        Products produit = productRepository.findById(idProduct).orElseThrow(() -> new RuntimeException("Produit introuvable"));
+        Products produit = productRepository.findById(idProduct)
+                .orElseThrow(() -> new RuntimeException("Produit introuvable"));
+
         panierRepository.save(panier);
-        LigneDeCommande ligneDeCommande = panierService.ajouterLigneDeCommande(panier, produit,quantite,produit.getProductName(), produit.getPrice(), produit.getImagePath(), produit.getGender(),produit.getVaccinated(), produit.getChipped());
-//        System.out.println(ligneDeCommande);
-        Optional<Products> optionalProduct = productRepository.findById(idProduct);
+
+        LigneDeCommande ligneDeCommande = panierService.ajouterLigneDeCommande(
+                panier, produit, quantite, produit.getProductName(), produit.getPrice(),
+                produit.getImagePath(), produit.getGender(), produit.getVaccinated(), produit.getChipped());
+
+        // Mettre à jour le prix total du panier dans la session
+//        double prixTotal = panierService.calculerPrixTotal(Math.toIntExact(panier.getId()));
+//        System.out.println(prixTotal);
+//        session.setAttribute("prixTotal", prixTotal);
+
         return "redirect:/panier";
     }
     @GetMapping("/supprimerLigneDeCommande/{idLigneDeCommande}/{id}")
